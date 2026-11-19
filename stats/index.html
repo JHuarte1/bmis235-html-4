@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+  Author: Jack Huarte
+  The Theory Desk: business stories that explain statistics theory.
+  Articles live in articles.js; app.js builds the pages from them.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Theory Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stats.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">The Theory <span>Desk</span></a>
+    <nav><a href="index.html">All units</a><a href="article.html?id=describing-data">Start reading</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker">Business statistics · explained through stories</div>
+    <h1>You can do the math. Here's why it works.</h1>
+    <p>Each unit is a short article about a real kind of business problem: an airline overbooking, a bank's fraud alerts, an A/B test that went sideways. Each one is built around the theory behind the formulas.</p>
+    <div class="progress-bar">
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <span id="progressText"></span>
+    </div>
+  </section>
+
+  <div class="how">
+    <div><b>1 · Read the story</b>A business decision that hinges on one statistical idea.</div>
+    <div><b>2 · Bust the myths</b>The misconceptions that cost points on theory questions.</div>
+    <div><b>3 · Check yourself</b>Concept questions with an explanation for every answer.</div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer class="site"><div class="wrap">Companies in these case studies are fictional. The statistical reasoning is real. Quiz progress is saved only in this browser.</div></footer>
+
+<script src="articles.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
