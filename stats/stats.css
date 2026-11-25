@@ -1,5 +1,5 @@
 /* =====================================================================
-   stats.css · The Theory Desk
+   stats.css · Statistics Theory Library
    Colors are tokens, redefined for dark mode below.
    ===================================================================== */
 
@@ -52,7 +52,12 @@ a { color: var(--accent); }
 .brand { font-family: var(--serif); font-size: 1.35rem; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
 .brand span { color: var(--accent); }
 .masthead nav { display: flex; gap: 16px; font-size: 0.9rem; }
-.masthead nav a { color: var(--muted); text-decoration: none; }
+.masthead nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
+.brand { white-space: nowrap; }
+@media (max-width: 480px) {
+  .brand { font-size: 1.12rem; }
+  .masthead nav .hide-sm { display: none; }
+}
 .masthead nav a:hover { color: var(--ink); }
 
 /* home */
@@ -61,6 +66,7 @@ a { color: var(--accent); }
 .hero h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin: 8px 0 14px; max-width: 20ch; }
 .hero p { color: var(--muted); font-size: 1.1rem; max-width: 60ch; margin: 0; }
 .progress-bar { margin-top: 22px; display: flex; align-items: center; gap: 12px; font-size: 0.9rem; color: var(--muted); }
+#progressText { white-space: nowrap; }
 .progress-track { flex: 0 1 260px; height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; }
 .progress-fill { height: 100%; background: var(--good); width: 0; transition: width .4s; }
 
@@ -76,7 +82,8 @@ a { color: var(--accent); }
   transition: border-color .15s, transform .15s;
 }
 .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-.card .meta { display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--muted); }
+.card .meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 0.78rem; color: var(--muted); }
+.card .meta > :last-child { white-space: nowrap; flex-shrink: 0; }
 .card .unit { font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; }
 .card h2 { font-family: var(--serif); font-size: 1.3rem; line-height: 1.25; margin: 2px 0 0; }
 .card p { margin: 0; color: var(--muted); font-size: 0.93rem; }

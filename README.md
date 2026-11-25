@@ -1,4 +1,4 @@
-# HTML-4: The Theory Desk
+# HTML-4: Statistics Theory Library
 **By:** Jack Huarte (JHuarte1)
 **Live site:** https://jhuarte1.github.io/bmis235-html-4/stats/
 
