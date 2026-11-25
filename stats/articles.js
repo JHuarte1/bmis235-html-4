@@ -370,7 +370,7 @@ const ARTICLES = [
   id: "confidence-intervals",
   unit: 6,
   topic: "Confidence Intervals",
-  title: "\"62%, Plus or Minus 5\": What a Product Survey Really Promises",
+  title: "\"62%, Plus or Minus 4.8\": What a Product Survey Really Promises",
   dek: "A snack company must decide whether to launch a new flavor. Learn what 95% confidence means (and doesn't), and what a margin of error can't protect you from.",
   minutes: 9,
   concepts: ["Point estimate", "Margin of error", "Interpretation of confidence", "Width trade-offs", "Sampling error vs. bias"],

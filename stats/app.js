@@ -48,7 +48,7 @@ function renderArticle() {
   if (i < 0) { root.innerHTML = `<p>Article not found. <a href="index.html">Back to all units</a>.</p>`; return; }
   const a = ARTICLES[i];
   const prev = ARTICLES[i - 1], next = ARTICLES[i + 1];
-  document.title = `${a.topic} · The Theory Desk`;
+  document.title = `${a.topic} · Statistics Theory Library`;
 
   // wrap tables so they scroll on phones
   const body = a.body.replace(/<table class="data">/g, '<div class="table-scroll"><table class="data">').replace(/<\/table>/g, "</table></div>");
@@ -96,6 +96,15 @@ function renderArticle() {
   window.scrollTo(0, 0);
 }
 
+// show answer choices in a random order so the right answer isn't always in the same spot
+function shuffle(list) {
+  for (let i = list.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [list[i], list[j]] = [list[j], list[i]];
+  }
+  return list;
+}
+
 function renderQuiz(a) {
   const quiz = document.getElementById("quiz");
   const scoreEl = document.getElementById("score");
@@ -105,7 +114,7 @@ function renderQuiz(a) {
   quiz.innerHTML = a.quiz.map((q, qi) => `
     <div class="q" data-q="${qi}">
       <p class="stem">${qi + 1}. ${esc(q.q)}</p>
-      ${q.options.map((o, oi) => `<button class="opt" data-o="${oi}">${esc(o)}</button>`).join("")}
+      ${shuffle(q.options.map((o, oi) => `<button class="opt" data-o="${oi}">${esc(o)}</button>`)).join("")}
       <div class="why">${esc(q.why)}</div>
     </div>`).join("");
   scoreEl.textContent = "";
